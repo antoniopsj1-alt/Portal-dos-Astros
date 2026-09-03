@@ -207,9 +207,19 @@
         </div>
         <p>&copy; 2026 Antônio Pereira de Souza Junior.</p>
         <p>Todos os direitos reservados.</p>
+        <button onclick="limparTexto()" type="submit">Voltar</button>
     </div>
 
+    
     <script>
+            
+            function limparTexto() {
+            // Pega o elemento pelo ID e define o valor como vazio
+            document.getElementById("resultado").style.display = 'none';
+            dataNascimento.value = 'dd/mm/aaaa';
+            nome.value = '';
+            }
+
         function calcularSigno(dataNasc) {
             const dia = dataNasc.getUTCDate();
             const mesSigno = dataNasc.getUTCMonth() + 1;
